@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<badlands xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+    <!-- Regular grid structure -->
+    <grid>
+        <!-- Digital elevation model file path -->
+        <demfile>/data/Delta_initialsurf_270420_v2.csv</demfile>
+        <!-- Boundary type: flat, slope or wall -->
+        <boundary>wall</boundary>
+        <!-- Optional parameter (integer) used to decrease TIN resolution.
+             The default value is set to 1. Increasing the factor
+             value will multiply the digital elevation model resolution
+             accordingly.  -->
+        <resfactor>1</resfactor>
+    </grid>
+
+    <!-- Simulation time structure -->
+    <time>
+        <!-- Simulation start time [a] -->
+        <start>0.</start>
+        <!-- Simulation end time [a] -->
+        <end>12000000.</end>
+        <!-- Minim time step [a] -->
+        <mindt>1.</mindt>
+        <!-- Display interval [a] -->
+        <display>100000.</display>
+    </time>
+    <!-- Simulation stratigraphic structure -->
+    <strata>
+        <!-- Stratal grid resolution [m] -->
+        <stratdx>10000.</stratdx>
+        <!-- Stratal layer interval [a] -->
+        <laytime>100000.</laytime>
+    </strata>
+    <!-- Sea-level structure -->
+    <sea>
+        <!-- Relative sea-level position [m] -->
+        <position>0.</position>
+    <!-- Sea-level curve - (optional) -->
+    	<curve>/data/SL_IH.csv</curve>
+    </sea>
+
+    <!-- Precipitation structure -->
+    <precipitation>
+        <!-- Number of precipitation events -->
+        <climates>1</climates>
+        <!-- Precipitation map definition -->
+        <rain>
+            <!-- Rain start time [a] -->
+            <rstart>0.</rstart>
+            <!-- Rain end time [a] -->
+            <rend>12.e6</rend>
+            <!-- Precipitation value [m/a] -->
+            <rval>1.</rval>
+            <!-- Precipitation map [m/a] -->
+            <!-- map>data/rainfall.csv</map -->
+        </rain>
+    </precipitation>
+
+    <!-- Stream power law parameters:
+         The stream power law is a simplified form of the usual expression of
+         sediment transport by water flow, in which the transport rate is assumed
+         to be equal to the local carrying capacity, which is itself a function of
+         boundary shear stress. -->
+    <sp_law>
+   		<!-- Make the distinction between purely erosive models (0) and erosion /
+            deposition ones (1). Default value is 1. 
+		-->
+		<dep>1</dep>
+        <!-- Critical slope used to force aerial deposition for alluvial plain,
+             in [m/m] (optional). -->
+        <slp_cr>0.000002</slp_cr>
+        <!-- Maximum percentage of deposition at any given time interval from rivers
+             sedimentary load in alluvial plain. Value ranges between [0,1] (optional). -->
+        <perc_dep>0.5</perc_dep>
+        <fillmax>50.</fillmax>
+        <!-- Values of m and n indicate how the incision rate scales
+             with bed shear stress for constant value of sediment flux
+             and sediment transport capacity.
+             Generally, m and n are both positive, and their ratio
+             (m/n) is considered to be close to 0.5 -->
+        <m>0.5</m>
+        <n>1.0</n>
+         <!-- The erodibility coefficient is scale-dependent and its value depend
+              on lithology and mean precipitation rate, channel width, flood
+              frequency, channel hydraulics. -->
+        <erodibility>4.e-7</erodibility>
+        <!-- Number of steps used to distribute marine deposit.
+             Default value is 5 (integer). (optional)-->
+        <diffnb>5</diffnb>
+        <!-- Proportion of marine sediment deposited on downstream nodes. It needs
+             to be set between ]0,1[. Default value is 0.9 (optional). -->
+        <diffprop>0.075</diffprop>
+    </sp_law>
+
+    <!-- Linear slope diffusion parameters:
+         Parameterisation of the sediment transport includes the simple creep transport
+         law which states that transport rate depends linearly on topographic gradient. -->
+    <creep>
+        <!-- Surface diffusion coefficient [m2/a] -->
+        <caerial>3.e-2</caerial>
+        <!-- Marine diffusion coefficient [m2/a] -->
+        <cmarine>5.e-2</cmarine>
+        <!-- River transported sediment diffusion
+             coefficient in marine realm [m2/a] -->
+        <criver>20.</criver>
+    </creep>
+    <!-- Flexural isostasy parameters:
+         Parameterisation of the flexural isostasy using the gFlex model from Wickert 2015.
+         The current wrapper limits the functionnality of the gFlex algorithm and only uses
+         the direct solver of the 2D finite difference method with the van Wees and Cloetingh
+         plate solution. -->
+
+    <!-- Output folder path -->
+    <outfolder>Delta_SL_IH_NoFlex</outfolder>
+
+</badlands>
