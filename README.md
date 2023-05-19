@@ -9,12 +9,12 @@ This repo looks at a series  of  conceptual  simulations  to investigate flexura
 Results show that flexural isostatic adjustments are bidirectional over 100-1000 kyr timescales and are in sync with the magnitude, frequency, and direction of sea-level fluctuations, and that isostatic adjustments play an important role in driving along-strike and cross-shelf river-mouth migration and sediment accumulation. 
 
 ## Files to Run
-To keep the figures consistent with the research article published with this package, you can use the data folder to run your scripts
+To keep the figures consistent with the research article published with this package, you can use the data and the extracted_results folder to run your scripts
 The script can be run using Jupyter Notebook.  The test for the package can be done with the notebooks;
  "3_postprocessing/Figures/Fig_6.ipynb" or "3_postprocessing/Figures/Fig_8.ipynb" 
 
 ## Requirements
-Ypu will need to install the packages necessary to run the package.  Conversely, you can  use the command 
+You will need to install the packages necessary to run the package.  Conversely, you can  use the command 
 "pip install -r requirements.txt"
 All the dependencies required to run the package is listed in the requirements.txt file.
 
