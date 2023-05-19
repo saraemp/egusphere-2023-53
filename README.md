@@ -15,7 +15,7 @@ The script can be run using Jupyter Notebook.  The test for the package can be d
 
 ## Requirements
 Ypu will need to install the packages necessary to run the package.  Conversely, you can  use the command 
-pip install -r requirements.txt
+"pip install -r requirements.txt"
 All the dependencies required to run the package is listed in the requirements.txt file.
 
 ## Citing this package
