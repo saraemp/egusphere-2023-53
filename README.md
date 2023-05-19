@@ -16,7 +16,7 @@ The script can be run using Jupyter Notebook.  The test for the package can be d
 ## Requirements
 Ypu will need to install the packages necessary to run the package.  Conversely, you can  use the command 
 pip install -r requirements.txt
-All the dependencies requited to run the package is listed in the requirements.txt file.
+All the dependencies required to run the package is listed in the requirements.txt file.
 
 ## Citing this package
 S. Polanco et al., “The flexural isostatic response of climatically driven sea-level changes on continental-scale deltas,” EGUsphere, vol. 2023, pp. 1–30, 2023, doi: 10.5194/egusphere-2023-53.
