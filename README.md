@@ -13,10 +13,25 @@ To keep the figures consistent with the research article published with this pac
 The script can be run using Jupyter Notebook.  The test for the package can be done with the notebooks;
  "3_postprocessing/Figures/Fig_6.ipynb" or "3_postprocessing/Figures/Fig_8.ipynb" 
 
-## Requirements
-You will need to install the packages necessary to run the package.  Conversely, you can  use the command 
+##  Running model via Docker
+In order to reproduce the full model results you will need to re-run the model.  The simplest way to do this is via using the badlandsmodel docker image.  
+1. Download and install docker desktop from :  https://docs.docker.com/desktop/
+2. Follow the instruction on https://badlands.readthedocs.io/en/latest/install.html to initialize the badlands model within docker.  The following commands can be used in Linux or Mac environments;
+    a. docker pull badlandsmodel/badlands
+    b. docker run -it -p 8888:8888 -v "$PWD":/live/share badlandsmodel/badlands
+3. Now you will need to download, navigate to and open this repository from your local machine within the docker environment.  The easiest way to do this is with github;
+    a. Download and install Git on your machine from https://github.com/git-guides/install-git
+    b. Open a terminal (command prompt in windows) and clone this repo with the command -> "git clone https://github.com/saraemp/egusphere-2023-53_private.git"
+4. Copy and paste the address "localhost:8888" in your browser of choice to start docker. 
+    a. Open the folder called "share"  (This will have all your files from your home directory) 
+    b. Navigate to wherever you have cloned the git repository
+    c. Open the folder 2_model_runing (this has the model configuration and paramaters preset for you)
+    d. Open the notebook "Run.ipynb" and execute the model
+    
+## Running model locally
+You will need to install the dependencies necessary to run the package.  Conversely, you can  use the command 
 "pip install -r requirements.txt"
-All the dependencies required to run the package is listed in the requirements.txt file.
+All the dependencies required to run the package is listed in the requirements.txt file.  
 
 ## Citing this package
 S. Polanco et al., “The flexural isostatic response of climatically driven sea-level changes on continental-scale deltas,” EGUsphere, vol. 2023, pp. 1–30, 2023, doi: 10.5194/egusphere-2023-53.
