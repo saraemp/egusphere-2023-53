@@ -13,6 +13,8 @@ To keep the figures consistent with the research article published with this pac
 
 The script can be run using Jupyter Notebook.  The test for the package can be done with the notebooks;
  "3_postprocessing/Figures/Fig_3d.ipynb" or "3_postprocessing/Figures/Fig_6.ipynb" 
+
+All other scripts will require the full model outputs to run.  These files are hundreds of gigabytes, therefore, it is best that the user run the model with the given configurations and generate their own model outputs.
  
 ##  Running model via Docker
 In order to reproduce the full model results you will need to re-run the model.  The simplest way to do this is via using the badlandsmodel docker image.  
