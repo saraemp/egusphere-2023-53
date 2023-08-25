@@ -12,8 +12,8 @@ Results show that flexural isostatic adjustments are bidirectional over 100-1000
 To keep the figures consistent with the research article published with this package, you can use the data and the extracted_results folder to run your scripts
 
 The script can be run using Jupyter Notebook.  The test for the package can be done with the notebooks;
- "3_postprocessing/Figures/Fig_6.ipynb" or "3_postprocessing/Figures/Fig_8.ipynb" 
-
+ "3_postprocessing/Figures/Fig_3d.ipynb" or "3_postprocessing/Figures/Fig_6.ipynb" 
+ 
 ##  Running model via Docker
 In order to reproduce the full model results you will need to re-run the model.  The simplest way to do this is via using the badlandsmodel docker image.  
 1. Download and install docker desktop from :  https://docs.docker.com/desktop/
