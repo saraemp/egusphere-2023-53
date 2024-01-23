@@ -4,7 +4,7 @@
     <!-- Regular grid structure -->
     <grid>
         <!-- Digital elevation model file path -->
-        <demfile>data/Delta_initialsurf_270420_v2.csv</demfile>
+        <demfile>data/Delta_initialsurface.csv</demfile>
         <!-- Boundary type: flat, slope or wall -->
         <boundary>wall</boundary>
         <!-- Optional parameter (integer) used to decrease TIN resolution.

@@ -39,7 +39,7 @@ You will need to install the dependencies necessary to run the package.  Convers
 
 All the dependencies required to run the package is listed in the requirements.txt file.  
 
-## Citing this package
+## Citing this work
 S. Polanco et al., “The flexural isostatic response of climatically driven sea-level changes on continental-scale deltas,” EGUsphere, vol. 2023, pp. 1–30, 2023, doi: 10.5194/egusphere-2023-53.
 
 ## Link to publication 
